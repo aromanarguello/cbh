@@ -9,4 +9,5 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
-In my opinion having nested if/else statements is very hard to read. My first approach was to solve this by breaking out certain logic based on redundacy shared with other pieces of logic in the current function. I separated the `createHash` logic into it's own function to avoid repetition and make it more testable. Additionally, returning TRIVIAL_PARTITION_KEY was moved to the top and refactored to be if there was no event provided just return 0, as if there is no event, there wont be a candidate.
+
+Having nested if/else statements is very hard to read. My first approach was to solve this by breaking out certain logic based on redundacy shared with other pieces of logic in the current function. I separated the `createHash` logic into it's own function to avoid repetition and make it more testable. Additionally, returning TRIVIAL_PARTITION_KEY was moved to the top and refactored to be if there was no event provided just return 0, as if there is no event, there wont be a candidate.
